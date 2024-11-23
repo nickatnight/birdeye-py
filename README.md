@@ -4,7 +4,7 @@
         <img alt="GitHub Actions status" src="https://github.com/nickatnight/birdeye-py/actions/workflows/main.yml/badge.svg">
     </a>
     <a href="https://codecov.io/gh/nickatnight/birdeye-py">
-        <img alt="Coverage" src="https://codecov.io/gh/nickatnight/birdeye-py/branch/main/graph/badge.svg?token=I20H47UKRK"/>
+        <img alt="Coverage" src="https://codecov.io/gh/nickatnight/birdeye-py/branch/main/graph/badge.svg?token=QKVhAbDk1g"/>
     </a>
     <a href="https://pypi.org/project/birdeye-py/">
         <img alt="PyPi Shield" src="https://img.shields.io/pypi/v/birdeye-py">
@@ -16,7 +16,7 @@
     <a href="https://pypi.org/project/birdeye-py/">
         <img alt="Download Shield" src="https://img.shields.io/pypi/dm/birdeye-py">
     </a>
-    <a href="https://github.com/nickatnight/birdeye-py/blob/master/LICENSE">
+    <a href="https://github.com/nickatnight/birdeye-py/blob/main/LICENSE">
         <img alt="License Shield" src="https://img.shields.io/github/license/nickatnight/birdeye-py">
     </a>
 </p>
