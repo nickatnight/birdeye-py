@@ -1,0 +1,126 @@
+[project]
+name = "birdeye-py"
+version = "0.0.1"
+description = "Python wrapper for birdeye.so api"
+readme = "README.md"
+requires-python = ">=3.9"
+maintainers = [
+  {name = "Nick Kelly", email = "nialexanderke@proton.me"}
+]
+dependencies = [
+    "requests==2.32.3",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/nickatnight/birdeye-py"
+Issues = "https://github.com/nickatnight/birdeye-py/issues"
+
+[tool.uv]
+dev-dependencies = [
+    "black==24.10.0",
+    "isort==5.13.2",
+    "pytest==8.3.3",
+    "pytest-cov==6.0.0",
+    "ruff==0.7.1",
+    "pytest-mock==3.14.0",
+    "mypy==1.13.0",
+    "types-requests==2.32.0.20241016",
+    "codespell==2.3.0",
+    "twine==5.1.1",
+    "ipython==8.18.1",
+    "sphinx==7.4.7",
+    "sphinx-rtd-theme==3.0.1",
+    "sphinx-rtd-dark-mode==1.3.0",
+]
+
+[tool.isort]
+multi_line_output = 3
+lines_after_imports = 2
+line_length = 88
+include_trailing_comma = true
+known_first_party = ["birdeyepy"]
+sections = 'FUTURE,STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER'
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+extend-exclude = '''
+(
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+)
+'''
+
+[tool.ruff]
+line-length = 88
+exclude = [".git", "__pycache__", ".mypy_cache", ".pytest_cache", "migrations", ".venv"]
+lint.select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    # "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+]
+lint.ignore = [
+    "B904",
+    "B006",
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.codespell]
+skip = 'pyproject.toml'
+ignore-words-list = 'selectin,'
+
+[tool.coverage.report]
+fail_under = 75
+
+[tool.coverage.run]
+omit = ['*tests/*', '*interfaces.py']
+
+[tool.mypy]
+# --strict
+disable_error_code = ["type-arg"]
+disallow_any_generics = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+implicit_reexport = false
+strict_equality = true
+# --strict end
+
+[[tool.mypy.overrides]]
+module = ["requests.packages.*"]
+ignore_missing_imports = true
