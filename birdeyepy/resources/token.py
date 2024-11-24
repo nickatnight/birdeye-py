@@ -101,7 +101,7 @@ class Token:
 
     def list_all_v2(self) -> dict:
         """This endpoint facilitates the retrieval of a list of tokens on a specified blockchain network. This upgraded version is exclusive to business and enterprise packages. By simply including the header for the requested blockchain without any query parameters, business and enterprise users can get the full list of tokens on the specified blockchain in the URL returned in the response. This removes the need for the limit response of the previous version and reduces the workload of making multiple calls."""
-        response = self.http.send(path=BirdEyeApiUrls.TOKEN_LIST_V2)
+        response = self.http.send(path=BirdEyeApiUrls.TOKEN_LIST_V2, method="POST")
 
         return cast(dict, response)
 

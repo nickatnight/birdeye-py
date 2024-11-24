@@ -102,6 +102,7 @@ def test_token_list_all_v2_api_called_with_expected_args() -> None:
 
     # Assert
     mock_http.send.assert_called_once_with(
+        method="POST",
         path=BirdEyeApiUrls.TOKEN_LIST_V2,
     )
 

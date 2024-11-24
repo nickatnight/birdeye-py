@@ -22,7 +22,7 @@
 </p>
 
 ## Features
-- 🪙 **BirdEye** Only supports [standard](https://docs.birdeye.so/docs/data-accessibility-by-packages#1-standard-package) subscription api urls (package is still in active development)
+- 🪙 **BirdEye** Supports all BirdEye data services [apis](https://docs.birdeye.so/docs/overview).
 - ♻️ **Retry Strategy** Sensible defaults to reliably retry/back-off fetching data from the api
 - ✏️ **Code Formatting** Fully typed with [mypy](https://mypy-lang.org/) and code formatters [black](https://github.com/psf/black) / [isort](https://pycqa.github.io/isort/)
 - ⚒️ **Modern tooling** using [uv](https://docs.astral.sh/uv/), [ruff](https://docs.astral.sh/ruff/), and [pre-commit](https://pre-commit.com/)
