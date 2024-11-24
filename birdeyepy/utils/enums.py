@@ -30,6 +30,15 @@ class BirdEyeApiUrls:
     TOKEN_TRADE_DATA_SINGLE = "defi/v3/token/trade-data/single"
     TOKEN_TRADE_DATA_MULTIPLE = "defi/v3/token/trade-data/multiple"
 
+    # WALLET (Beta)
+    WALLET_SUPPORTED_NETWORKS = "v1/wallet/list_supported_chain"
+    WALLET_PORTFOLIO = "v1/wallet/token_list"
+    WALLET_PORTFOLIO_MULTICHAIN = "v1/wallet/multichain_token_list"
+    WALLET_TOKEN_BALANCE = "v1/wallet/token_balance"
+    WALLET_TRANSACTION_HISTORY = "v1/wallet/tx_list"
+    WALLET_TRANSACTION_HISTORY_MULTICHAIN = "v1/wallet/multichain_tx_list"
+    WALLET_TRANSACTION_SIMULATION = "v1/wallet/simulate"
+
 
 class BirdEyeChainEnum(SimpleEnum):
     # Solana
