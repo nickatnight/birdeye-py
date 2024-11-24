@@ -4,7 +4,7 @@ from birdeyepy.resources.trader import Trader
 from birdeyepy.utils import BirdEyeApiUrls
 
 
-def test_trader_gainers_losers_api_expected_response() -> None:
+def test_trader_gainers_losers_api_called_with_expected_args() -> None:
     # Arrange
     mock_http = MagicMock()
 
@@ -25,7 +25,7 @@ def test_trader_gainers_losers_api_expected_response() -> None:
     )
 
 
-def test_trader_seek_by_time_api_expected_response() -> None:
+def test_trader_seek_by_time_api_called_with_expected_args() -> None:
     # Arrange
     mock_http = MagicMock()
 
