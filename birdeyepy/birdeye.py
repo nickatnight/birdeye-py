@@ -1,20 +1,24 @@
 from birdeyepy.resources import RESOURCE_MAP
 from birdeyepy.utils import (
     BASE_BIRD_EYE_API_URL,
-    BirdEyeChain,
+    BirdEyeChainEnum,
     BirdEyeClientError,
     RequestsClient,
 )
 
 
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 
 
 class BirdEye:
-    """API Client for BirdEye"""
+    """API Client for BirdEye
 
-    def __init__(self, api_key: str, chain: str = BirdEyeChain.SOLANA) -> None:
-        if chain not in BirdEyeChain.all():
+    :param api_key:         The API key for the BirdEye. See here https://docs.birdeye.so/docs/authentication-api-keys
+    :param chain:           The chain to use. Defaults to 'solana'
+    """
+
+    def __init__(self, api_key: str, chain: str = BirdEyeChainEnum.SOLANA) -> None:
+        if chain not in BirdEyeChainEnum.all():
             raise BirdEyeClientError(f"Invalid chain: {chain}")
 
         _http = RequestsClient(

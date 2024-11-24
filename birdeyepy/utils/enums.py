@@ -15,7 +15,7 @@ class BirdEyeApiUrls:
     TRADER_SEEK_BY_TIME = "trader/txs/seek_by_time"
 
 
-class BirdEyeChain(SimpleEnum):
+class BirdEyeChainEnum(SimpleEnum):
     # Solana
     SOLANA = "solana"
     ETHEREUM = "ethereum"
