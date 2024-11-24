@@ -49,7 +49,7 @@ client.defi.price(
 ```
 
 ## Documentation
-See ful documentation [here](https://birdeye-py.readthedocs.io/en/stable/), or API [docs](https://docs.birdeye.so/docs/overview)
+See ful documentation [here](https://birdeye-py.readthedocs.io/en/latest/), or API [docs](https://docs.birdeye.so/docs/overview)
 
 ---
 
