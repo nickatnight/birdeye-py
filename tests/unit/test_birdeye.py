@@ -1,8 +1,10 @@
 from unittest.mock import MagicMock
 
+import pytest
+
 from birdeyepy.birdeye import BirdEye, __version__
 from birdeyepy.resources import RESOURCE_MAP
-from birdeyepy.utils import BASE_BIRD_EYE_API_URL
+from birdeyepy.utils import BASE_BIRD_EYE_API_URL, BirdEyeClientError
 
 
 def test_client_http_called_with_correct_args(mocker: MagicMock) -> None:
@@ -15,8 +17,20 @@ def test_client_http_called_with_correct_args(mocker: MagicMock) -> None:
     # Assert
     mock_requests_client.assert_called_once_with(
         base_url=BASE_BIRD_EYE_API_URL,
-        headers={"X-API-KEY": "test", "User-Agent": f"birdeyepy/v{__version__}"},
+        headers={
+            "x-chain": "solana",
+            "X-API-KEY": "test",
+            "User-Agent": f"birdeyepy/v{__version__}",
+        },
     )
+
+
+def test_client_invalid_chain() -> None:
+    # Act / Assert
+    with pytest.raises(BirdEyeClientError) as e:
+        BirdEye(api_key="test", chain="invalid")
+
+    assert str(e.value) == "Invalid chain: invalid"
 
 
 def test_client_properties(

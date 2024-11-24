@@ -39,7 +39,8 @@ $ pip install birdeye-py
 ```python
 from birdeyepy import BirdEye
 
-client = BirdEye(api_key="your-api-key")
+client = BirdEye(api_key="your-api-key") # 'x-chain' header defaults to solana
+eth_client = BirdEye(api_key="your-api-key", chain="ethereum")
 
 # DeFi
 
@@ -69,8 +70,8 @@ client.token.list_all()
 ```
 
 ## Documentation
-Coming Soon
+See https://docs.birdeye.so/docs/overview
 
 ---
 
-If you would like to support development efforts, tips are greatly appreciated. SOL address: HKmUpKBCcZGVX8RqLRcKyjYuY23hQHwnFSHXzdon4pCH
+If you would like to support development efforts, tips are greatly appreciated. SOL wallet address: HKmUpKBCcZGVX8RqLRcKyjYuY23hQHwnFSHXzdon4pCH
