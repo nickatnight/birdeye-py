@@ -4,7 +4,7 @@ from birdeyepy.resources.token import Token
 from birdeyepy.utils import BirdEyeApiUrls
 
 
-def test_token_list_all_api_expected_response() -> None:
+def test_token_list_all_api_called_with_expected_args() -> None:
     # Arrange
     mock_http = MagicMock()
 

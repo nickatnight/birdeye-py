@@ -4,7 +4,7 @@ from birdeyepy.resources.defi import DeFi
 from birdeyepy.utils import DEFAULT_SOL_ADDRESS, BirdEyeApiUrls
 
 
-def test_defi_price_api_expected_response() -> None:
+def test_defi_price_api_called_with_expected_args() -> None:
     # Arrange
     mock_http = MagicMock()
 
@@ -19,7 +19,7 @@ def test_defi_price_api_expected_response() -> None:
     )
 
 
-def test_defi_history_api_expected_response() -> None:
+def test_defi_history_api_called_with_expected_args() -> None:
     # Arrange
     mock_http = MagicMock()
 

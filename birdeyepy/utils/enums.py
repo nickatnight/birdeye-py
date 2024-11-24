@@ -10,6 +10,10 @@ class BirdEyeApiUrls:
     DEFI_TOKEN_LIST = "defi/tokenlist"
     DEFI_HISTORY_PRICE = "defi/history_price"
 
+    # TRADER
+    TRADER_GAINERS_LOSERS = "trader/gainers-losers"
+    TRADER_SEEK_BY_TIME = "trader/txs/seek_by_time"
+
 
 class BirdEyeChain(SimpleEnum):
     # Solana
