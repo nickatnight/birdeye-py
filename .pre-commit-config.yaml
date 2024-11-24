@@ -27,3 +27,9 @@ repos:
     rev: v2.3.0
     hooks:
     -   id: codespell
+-   repo: https://github.com/astral-sh/uv-pre-commit
+    # uv version.
+    rev: 0.5.4
+    hooks:
+    # Update the uv lockfile
+    -   id: uv-lock

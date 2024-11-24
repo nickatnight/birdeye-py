@@ -1,5 +1,5 @@
 from birdeyepy.utils.constants import BASE_BIRD_EYE_API_URL, DEFAULT_SOL_ADDRESS
-from birdeyepy.utils.enums import BirdEyeApiUrls, BirdEyeChain
+from birdeyepy.utils.enums import BirdEyeApiUrls, BirdEyeChainEnum
 from birdeyepy.utils.exceptions import BirdEyeClientError
 from birdeyepy.utils.helpers import as_api_args
 from birdeyepy.utils.http import RequestsClient
@@ -12,7 +12,7 @@ __all__ = [
     "BASE_BIRD_EYE_API_URL",
     "DEFAULT_SOL_ADDRESS",
     "BirdEyeApiUrls",
-    "BirdEyeChain",
+    "BirdEyeChainEnum",
     "BirdEyeRequestParams",
     "IHttp",
     "RequestsClient",
