@@ -12,7 +12,7 @@
     <a href="https://www.python.org/downloads/">
         <img alt="Python Versions Shield" src="https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white">
     </a>
-    <!-- <a href="https://birdeye-py.readthedocs.io/en/stable/"><img alt="Read The Docs Badge" src="https://img.shields.io/readthedocs/birdeye-py"></a> -->
+    <a href="https://birdeye-py.readthedocs.io/en/stable/"><img alt="Read The Docs Badge" src="https://img.shields.io/readthedocs/birdeye-py"></a>
     <a href="https://pypistats.org/packages/birdeye-py">
         <img alt="Download Shield" src="https://img.shields.io/pypi/dm/birdeye-py">
     </a>
