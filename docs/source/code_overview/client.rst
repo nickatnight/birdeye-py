@@ -49,6 +49,63 @@ APIs
         type_in_time="15m"  # default
     )
 
+    # https://docs.birdeye.so/reference/get_defi-networks
+    client.defi.supported_networks()
+
+    # https://docs.birdeye.so/reference/get_defi-multi-price
+    client.defi.price_multiple(
+        addresses=["Gr11mosZNZjwpqnemXNnWs9E2Bnv7R6vzaKwJTdjo8zQ", "AGQZRtz7hZtz3VJ1CoXRMNMyh2ZMZ1g6pv4aGMUSpump"],
+    )  # can also use comma separated strings 'Gr11mosZNZjwpqnemXNnWs9E2Bnv7R6vzaKwJTdjo8zQ,AGQZRtz7hZtz3VJ1CoXRMNMyh2ZMZ1g6pv4aGMUSpump'
+
+    # https://docs.birdeye.so/reference/get_defi-historical-price-unix
+    client.defi.history_by_unix(
+        address="Gr11mosZNZjwpqnemXNnWs9E2Bnv7R6vzaKwJTdjo8zQ",
+        unixtime=1732398942
+    )
+
+    # https://docs.birdeye.so/reference/get_defi-txs-token
+    client.defi.trades_token(
+        address="Gr11mosZNZjwpqnemXNnWs9E2Bnv7R6vzaKwJTdjo8zQ
+    )
+
+    # https://docs.birdeye.so/reference/get_defi-txs-pair
+    client.defi.trades_pair(
+        address="9wFFyRfZBsuAha4YcuxcXLKwMxJR43S7fPfQLusDBzvT
+    )
+
+    # https://docs.birdeye.so/reference/get_defi-txs-token-seek-by-time
+    client.defi.trades_token_by_time(
+        address="Gr11mosZNZjwpqnemXNnWs9E2Bnv7R6vzaKwJTdjo8zQ",
+        before_time=1732398942,
+        after_time=1732398961
+    )
+
+    # https://docs.birdeye.so/reference/get_defi-txs-pair-seek-by-time
+    client.defi.trades_pair_by_time(
+        address="9wFFyRfZBsuAha4YcuxcXLKwMxJR43S7fPfQLusDBzvT",
+        before_time=1732398942,
+        after_time=1732398961
+    )
+
+    # https://docs.birdeye.so/reference/get_defi-ohlcv
+    client.defi.ohlcv(
+        address="Gr11mosZNZjwpqnemXNnWs9E2Bnv7R6vzaKwJTdjo8zQ",
+        time_from=1732398942,
+        time_to=1732398961
+    )
+
+    # https://docs.birdeye.so/reference/get_defi-ohlcv-pair
+    client.defi.ohlcv_pair(
+        address="9wFFyRfZBsuAha4YcuxcXLKwMxJR43S7fPfQLusDBzvT",
+        time_from=1732398942,
+        time_to=1732398961
+    )
+
+    # https://docs.birdeye.so/reference/get_defi-price-volume-single
+    client.defi.volume_price_single(
+        address="Gr11mosZNZjwpqnemXNnWs9E2Bnv7R6vzaKwJTdjo8zQ"
+    )
+
     # TOKEN
 
     # https://docs.birdeye.so/reference/get_defi-tokenlist
