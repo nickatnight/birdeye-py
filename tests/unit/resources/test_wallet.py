@@ -69,12 +69,12 @@ def test_wallet_transaction_history_api_called_with_expected_args() -> None:
 
     # Act
     client = Wallet(http=mock_http)
-    client.transaction_history(wallet="test")
+    client.transaction_history(wallet="test", before="test")
 
     # Assert
     mock_http.send.assert_called_once_with(
         path=BirdEyeApiUrls.WALLET_TRANSACTION_HISTORY,
-        params={"wallet": "test", "limit": 100},
+        params={"wallet": "test", "before": "test", "limit": 100},
     )
 
 
