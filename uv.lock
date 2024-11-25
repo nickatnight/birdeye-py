@@ -42,7 +42,7 @@ wheels = [
 
 [[package]]
 name = "birdeye-py"
-version = "0.0.6"
+version = "0.0.7"
 source = { virtual = "." }
 dependencies = [
     { name = "requests" },

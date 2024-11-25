@@ -9,6 +9,16 @@ class BirdEyeApiUrls:
     DEFI_PRICE = "defi/price"
     DEFI_TOKEN_LIST = "defi/tokenlist"
     DEFI_HISTORY_PRICE = "defi/history_price"
+    DEFI_SUPPORTED_NETWORKS = "defi/networks"
+    DEFI_PRICE_MULTIPLE = "defi/multi_price"
+    DEFI_HISTORY_PRICE_BY_UNIX = "defi/historical_price_unix"
+    DEFI_TRADES_TOKEN = "defi/txs/token"
+    DEFI_TRADES_PAIR = "defi/txs/pair"
+    DEFI_TRADES_TOKEN_BY_TIME = "defi/txs/token/seek_by_time"
+    DEFI_TRADES_PAIR_BY_TIME = "defi/txs/pair/seek_by_time"
+    DEFI_OHLCV = "defi/ohlcv"
+    DEFI_OHLCV_PAIR = "defi/ohlcv/pair"
+    DEFI_VOLUME_SINGLE = "defi/price_volume/single"
 
     # TRADER
     TRADER_GAINERS_LOSERS = "trader/gainers-losers"
