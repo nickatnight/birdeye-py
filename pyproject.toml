@@ -1,6 +1,6 @@
 [project]
 name = "birdeye-py"
-version = "0.0.8"
+version = "0.0.9"
 description = "Python wrapper for birdeye.so api"
 readme = "README.md"
 requires-python = ">=3.9"

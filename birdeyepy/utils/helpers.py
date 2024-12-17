@@ -27,3 +27,23 @@ def as_api_args(func: Callable) -> Callable:
         return func(*args, **kwargs)
 
     return wrapper_as_api_args
+
+
+def temp_remove_x_chain_header(func: Callable) -> Callable:
+    @functools.wraps(func)
+    def wrapper(self: Any, *args: int, **kwargs: Any) -> Any:
+        # Temporarily remove the "x-chain" header
+        original_headers = self.http.s.headers.copy()
+        if "x-chain" in self.http.s.headers:
+            del self.http.s.headers["x-chain"]
+
+        try:
+            # Call the original function
+            result = func(self, *args, **kwargs)
+        finally:
+            # Re-add the "x-chain" header
+            self.http.s.headers.update(original_headers)
+
+        return result
+
+    return wrapper

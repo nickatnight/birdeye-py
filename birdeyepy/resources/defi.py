@@ -20,7 +20,7 @@ class DeFi:
         address: Optional[str] = DEFAULT_SOL_ADDRESS,
         check_liquidity: Optional[int] = 100,
         include_liquidity: Optional[bool] = None,
-    ) -> list:
+    ) -> dict:
         """Get price update of a token.
 
         :param address:             The address of the token.
@@ -35,7 +35,7 @@ class DeFi:
         request: BirdEyeRequestParams = {"params": params}
         response = self.http.send(path=BirdEyeApiUrls.DEFI_PRICE, **request)
 
-        return cast(list, response)
+        return cast(dict, response)
 
     def history(
         self,
