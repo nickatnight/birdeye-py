@@ -1,6 +1,12 @@
 from typing import Optional, cast
 
-from birdeyepy.utils import BirdEyeApiUrls, BirdEyeRequestParams, IHttp, as_api_args
+from birdeyepy.utils import (
+    BirdEyeApiUrls,
+    BirdEyeRequestParams,
+    IHttp,
+    as_api_args,
+    temp_remove_x_chain_header,
+)
 
 
 class Search:
@@ -8,6 +14,7 @@ class Search:
         self.http = http
 
     @as_api_args
+    @temp_remove_x_chain_header
     def token_market_data(
         self,
         *,
