@@ -10,6 +10,7 @@ BirdEye Client
     resources/trader
     resources/wallet
     resources/pair
+    resources/search
 
 
 .. note::
@@ -170,3 +171,11 @@ APIs
 
     # https://docs.birdeye.so/reference/get_defi-v3-pair-overview-single
     client.pair.overview_single(address="Cv5w6oLCquS4M3WN7DcwFrFiCCJwiL31MCJu3jTXpump")
+
+    # SEARCH
+
+    # https://docs.birdeye.so/reference/get_defi-v3-search
+    client.search.token_market_data(
+        keyword="rizz"
+        markets="Raydium"
+    )

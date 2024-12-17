@@ -53,6 +53,9 @@ class BirdEyeApiUrls:
     PAIR_OVERVIEW_MULTIPLE = "defi/v3/pair/overview/multiple"
     PAIR_OVERVIEW_SINGLE = "defi/v3/pair/overview/single"
 
+    # Search
+    SEARCH_TOKEN_MARKET_DATA = "defi/v3/search"
+
 
 class BirdEyeChainEnum(SimpleEnum):
     # Solana
