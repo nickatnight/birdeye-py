@@ -49,6 +49,10 @@ class BirdEyeApiUrls:
     WALLET_TRANSACTION_HISTORY_MULTICHAIN = "v1/wallet/multichain_tx_list"
     WALLET_TRANSACTION_SIMULATION = "v1/wallet/simulate"
 
+    # PAIR
+    PAIR_OVERVIEW_MULTIPLE = "defi/v3/pair/overview/multiple"
+    PAIR_OVERVIEW_SINGLE = "defi/v3/pair/overview/single"
+
 
 class BirdEyeChainEnum(SimpleEnum):
     # Solana

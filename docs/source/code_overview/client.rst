@@ -9,6 +9,7 @@ BirdEye Client
     resources/token
     resources/trader
     resources/wallet
+    resources/pair
 
 
 .. note::
