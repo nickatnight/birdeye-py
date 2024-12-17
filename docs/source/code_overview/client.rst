@@ -160,3 +160,13 @@ APIs
 
     # https://docs.birdeye.so/reference/get_defi-v3-token-holder
     client.token.holder(address="Gr11mosZNZjwpqnemXNnWs9E2Bnv7R6vzaKwJTdjo8zQ")
+
+    # PAIR
+
+    # https://docs.birdeye.so/reference/get_defi-v3-pair-overview-multiple
+    client.pair.overview_multiple(
+        list_address=["Cv5w6oLCquS4M3WN7DcwFrFiCCJwiL31MCJu3jTXpump", "FMNB4a8TFNvo3go6tkUQmr2YJHBxhiuT39bt3j6qjGJc"]
+    )
+
+    # https://docs.birdeye.so/reference/get_defi-v3-pair-overview-single
+    client.pair.overview_single(address="Cv5w6oLCquS4M3WN7DcwFrFiCCJwiL31MCJu3jTXpump")
